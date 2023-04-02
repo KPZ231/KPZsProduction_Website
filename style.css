@@ -14,7 +14,7 @@ h1,h2,h3, p{
     color: whitesmoke;
 }
 
-.links{
+/* .links{
     display: inline-block;
     border-radius: 25px;
     position: fixed;
@@ -24,6 +24,34 @@ h1,h2,h3, p{
     margin-top: -140px;
     right: 15px;
     box-shadow: 5px 5px 5px black;
+} */
+
+.vertical-menu {
+    position: relative;
+    border-radius: 25px;
+    background-color: #292929;
+    box-shadow: 5px 5px 5px black;
+    width: 73px;
+    float: right;
+    bottom: 265px;
+}
+
+.vertical-menu a {
+    background-color: #292929;
+    color: black;
+    border-radius: 25px;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color:rgba(115, 114, 110, 0.1)
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
 }
 
 .mainBlock{

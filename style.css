@@ -1,0 +1,52 @@
+body{
+    background-color: #252525;
+}
+
+img{
+    border-radius: 25px;
+}
+img:hover{
+    background-color: rgba(115, 114, 110, 0.1);
+}
+
+h1,h2,h3, p{
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+.links{
+    display: inline-block;
+    border-radius: 25px;
+    position: fixed;
+    background-color: #292929;
+    width: 150px;
+    height: 340px;
+    margin-top: -140px;
+    right: 15px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.mainBlock{
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+    margin: auto;
+    width: 80%;
+    height: 40%;
+    background-color: #292929;
+}
+
+.linkImage{
+    position: relative;
+    padding-left: 33%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    text-align: center;
+}

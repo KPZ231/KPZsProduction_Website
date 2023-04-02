@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>KPZsProductions</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; font-size: 36px;">Welcome To KPZsProductions</h1>
+    <h2 style="text-align: center; font-size: 24px;">My Productions</h2>
+
+    <!--Główne Bloki Z Moimi Produkcjami-->
+    <div class="mainBlock" style="display: block;">
+        <a href="https://kacper-duda.itch.io/scp-173-decontamination" target="_blank">
+            <img src="Images/scp_img.png" alt="scp-173-decontamination"></a>
+        <a href="https://thedramgamestudios.itch.io/esaper" target="_blank">
+            <img src="Images/escaper.png" alt="escaper"></a>
+    </div>
+
+    <!--Linki-->
+    <div id="links" class="links">
+        <p style="padding-left: 33%; font-size: 18px; text-decoration: underline;">Links</p>
+        <a class="linkImage" href="https://github.com/KPZ231"><img src="Images/github.png" alt="github" width="50px" height="50px"></a>
+        <a style="top:5% "class="linkImage" href="" target="_blank"><img src="Images/discord.png" alt="discord" width="50px" height="50px"></a>
+    </div>
+    
+    <!--Footer-->
+    <div class="footer">
+       <p>Contact: Email: <span style="text-decoration: underline; font-style: italic; color: blueviolet;">contactkpz.productions@gmail.com</span> or Discord:
+         <span style="text-decoration: underline; font-style: italic; color: blueviolet;">itsakacperduda#8787</span></p>
+    </div>
+</body>
+
+<script>
+
+    const links = document.getElementById("links");
+
+    var isMobile = {
+    Android: function() {
+        //alert("Android")
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        //alert("BlackBerry")
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+       // alert("IOS")
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        //alert("Opera")    
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        //alert("Windows")
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+if( isMobile.any() ) alert('Używasz urządzenia mobilnego!');
+
+
+
+</script>
+
+
+</html>

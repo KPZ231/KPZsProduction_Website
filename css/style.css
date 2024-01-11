@@ -15,7 +15,8 @@ body {
     height: 90vh;
     /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
     /* background-image: radial-gradient(rgba(216, 0, 0, 0.75), black 120%);*/
-    background-image: radial-gradient(rgba(153, 57, 124, 0.75), black 120%);
+    /*background-image: radial-gradient(rgba(153, 57, 124, 0.75), black 120%);*/
+    background-image: radial-gradient(rgb(3 54 63 / 75%), black 120%);
 
 }
 

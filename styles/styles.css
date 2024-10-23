@@ -86,3 +86,23 @@ a:active {
     border-color: orange;
   }
 }
+
+
+.informationContainer{
+  width: 40%;
+  height: fit-content;
+  margin: auto;
+  color: white;
+  font-size: 20pt;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.grid{
+  width: fit-content;
+  margin: auto; 
+}
+
+.container{
+  padding: 30px;
+}

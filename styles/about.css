@@ -1,35 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap");
 
+.containerForAbout {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1s;
+}
 
-body, html{
-    font-family: "Montserrat", sans-serif;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-  
+  text-shadow: 0 0 7px rgba(255,255,255,.05), 0 0 3px rgba(255,255,255,.05);
 }
-.containerForAbout {
-    color: #e5e5e5;
-    font-size: 2.26rem;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Add this line to horizontally center the container */
-  }
-  
 
 .animation {
-  height:50px;
-  overflow:hidden;
+  height: 50px;
+  overflow: hidden;
   margin-left: 1rem;
+  position: relative;
 }
 
-.animation > div > div  {
+.animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.2), transparent 10%, transparent 90%, rgba(10,10,10,0.2));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animation > div > div {
   padding: 0.25rem 0.75rem;
-  height:2.81rem;
+  height: 2.81rem;
   margin-bottom: 2.81rem;
-  display:inline-block;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.animation > div > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.05), transparent);
+  z-index: -1;
 }
 
 .animation div:first-child {
@@ -37,30 +73,74 @@ p {
 }
 
 .first div {
-  background-color:#20a7d8;
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px rgba(224, 165, 0, 0.3);
 }
+
 .second div {
-  background-color:#CD921E;
+  background-color: rgba(224, 165, 0, 0.8);
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px rgba(224, 165, 0, 0.2);
 }
+
 .third div {
-  background-color:#c10528;
+  background-color: rgba(224, 165, 0, 0.6);
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px rgba(224, 165, 0, 0.15);
 }
-.fourth div{
-    background-color:#5605c1;
+
+.fourth div {
+  background-color: rgba(224, 165, 0, 0.4);
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px rgba(224, 165, 0, 0.1);
 }
-.fifth div{
-    background-color:#05c14d;
+
+.fifth div {
+  background-color: rgba(224, 165, 0, 0.2);
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px rgba(224, 165, 0, 0.05);
 }
 
 @keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
+  0% {
+    margin-top: 0;
+    transform: translateZ(0);
+  }
+  10% {
+    margin-top: 0;
+    transform: translateZ(0);
+  }
+  20% {
+    margin-top: -5.62rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  30% {
+    margin-top: -5.62rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  40% {
+    margin-top: -11.24rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  60% {
+    margin-top: -11.24rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  70% {
+    margin-top: -5.62rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  80% {
+    margin-top: -5.62rem;
+    transform: translateZ(0) scale(1.05);
+  }
+  90% {
+    margin-top: 0;
+    transform: translateZ(0);
+  }
+  100% {
+    margin-top: 0;
+    transform: translateZ(0);
+  }
 }

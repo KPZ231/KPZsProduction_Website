@@ -21,6 +21,119 @@
     />
     <!-- Links -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      /* Additional project card styles */
+      .project-card {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+        min-height: 240px;
+      }
+      
+      .project-card h4 {
+        color: var(--text-light);
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .project-card h4::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
+      }
+      
+      .project-card:hover h4::after {
+        width: 100%;
+      }
+      
+      .project-card p {
+        color: var(--text-mid);
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      
+      .project-card .project-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 1.2rem;
+        transition: var(--transition);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .project-card:hover .project-image {
+        transform: scale(1.03);
+        border: 1px solid rgba(224, 165, 0, 0.3);
+      }
+      
+      .project-card .project-link {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+        margin-top: auto;
+        position: relative;
+        transition: var(--transition);
+      }
+      
+      .project-card .project-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--accent-color);
+        transition: var(--transition);
+      }
+      
+      .project-card .project-link:hover::after {
+        width: 100%;
+      }
+      
+      .project-card .project-link span {
+        margin-left: 5px;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+      
+      .project-card .project-link:hover span {
+        transform: translateX(5px);
+      }
+      
+      .project-card .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 1rem 0;
+      }
+      
+      .project-card .tech-tag {
+        background-color: rgba(224, 165, 0, 0.1);
+        color: var(--accent-color);
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        border: 1px solid rgba(224, 165, 0, 0.3);
+        transition: var(--transition);
+      }
+      
+      .project-card:hover .tech-tag {
+        background-color: rgba(224, 165, 0, 0.2);
+      }
+    </style>
   </head>
   <body>
     <a href="./index.html" class="return-button">
@@ -28,32 +141,56 @@
     </a>
     
     <div class="container">
-      <h1>My Projects</h1>
+      <h1>My <i>Projects</i></h1>
       <hr>
       
       <div class="grid">
-        <div class="project-card">
-          <iframe
-            frameborder="0"
-            src="https://itch.io/embed/1895721?linkback=true&amp;border_width=2&amp;bg_color=1a1a2e&amp;fg_color=ffffff&amp;link_color=c8a951&amp;border_color=c8a951"
-            width="100%"
-            height="169"
-          ><a href="https://kacper-duda.itch.io/scp-173-decontamination"
-            >SCP-173 Decontamination by KPZ</a
-          ></iframe>
+        <div class="project-card" style="--card-index: 2;">
+          <img src="/api/placeholder/400/180" alt="Inkwell Project" class="project-image">
+          <h4>Inkwell</h4>
+          <p style="--paragraph-index: 0;">Inkwell is a multidimensional platform that connects people, making note-taking more collaborative and efficient.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+          <a href="#" class="project-link">
+            View Project <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
         </div>
-
-        <div class="project-card">
-          <iframe
-            frameborder="0"
-            src="https://itch.io/embed/2727471?linkback=true&amp;bg_color=1a1a2e&amp;fg_color=ffffff&amp;link_color=c8a951&amp;border_color=c8a951"
-            width="100%"
-            height="169"
-          ><a href="https://kacper-duda.itch.io/dinos-clicker"
-            >Dino`s Clicker by KPZ</a
-          ></iframe>
+        
+        <div class="project-card" style="--card-index: 3;">
+          <img src="/api/placeholder/400/180" alt="Lipus" class="project-image">
+          <h4>Łowisko Lipus</h4>
+          <p style="--paragraph-index: 0;">A website for, private fishing lake</p>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">PHP.js</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JS</span>
+          </div>
+          <a href="#" class="project-link">
+            View Project <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
+    
+    <script>
+      // Add animation classes to elements
+      document.addEventListener('DOMContentLoaded', function() {
+        // Create staggered animation effect for cards
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach((card, index) => {
+          card.style.setProperty('--card-index', index);
+        });
+        
+        // Create staggered animation effect for paragraphs
+        const paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach((p, index) => {
+          p.style.setProperty('--paragraph-index', index);
+        });
+      });
+    </script>
   </body>
 </html>

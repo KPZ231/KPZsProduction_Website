@@ -46,6 +46,24 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- Mobile Menu Button -->
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+      <span class="material-symbols-outlined">menu</span>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="proj.html">Projects</a>
+        <a href="https://github.com/KPZ231" target="_blank" rel="noopener noreferrer">Github</a>
+      </div>
+    </div>
+    
+    <!-- Overlay for Mobile Menu -->
+    <div class="overlay" id="overlay"></div>
+    
     <div class="container">
       <div class="typewriter">
         <h1>Welcome To <i>KPZsProductions.</i></h1>
@@ -69,6 +87,45 @@
     
     <script src="js/animations.js"></script>
     <script src="js/structured-data.js"></script>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const overlay = document.getElementById('overlay');
+        
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileNav.classList.toggle('active');
+          overlay.classList.toggle('active');
+          
+          // Change icon based on menu state
+          const menuIcon = mobileMenuBtn.querySelector('span');
+          if (mobileNav.classList.contains('active')) {
+            menuIcon.textContent = 'close';
+          } else {
+            menuIcon.textContent = 'menu';
+          }
+        });
+        
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+          mobileNav.classList.remove('active');
+          overlay.classList.remove('active');
+          mobileMenuBtn.querySelector('span').textContent = 'menu';
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+          link.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            mobileMenuBtn.querySelector('span').textContent = 'menu';
+          });
+        });
+      });
+    </script>
     
     <!-- Structured Data Schema -->
     <script type="application/ld+json">

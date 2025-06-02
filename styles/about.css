@@ -144,3 +144,105 @@ p {
     transform: translateZ(0);
   }
 }
+
+/* Responsive styles for animations */
+@media (max-width: 575px) {
+  .containerForAbout {
+    font-size: 1.2rem;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  
+  .animation {
+    height: 40px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .animation > div > div {
+    height: 2.2rem;
+    margin-bottom: 2.2rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  @keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+    10% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: -4.4rem;
+    }
+    30% {
+      margin-top: -4.4rem;
+    }
+    40% {
+      margin-top: -8.8rem;
+    }
+    60% {
+      margin-top: -8.8rem;
+    }
+    70% {
+      margin-top: -4.4rem;
+    }
+    80% {
+      margin-top: -4.4rem;
+    }
+    90% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .containerForAbout {
+    font-size: 1.3rem;
+  }
+  
+  .animation {
+    height: 45px;
+  }
+  
+  .animation > div > div {
+    height: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  @keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+    10% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: -5rem;
+    }
+    30% {
+      margin-top: -5rem;
+    }
+    40% {
+      margin-top: -10rem;
+    }
+    60% {
+      margin-top: -10rem;
+    }
+    70% {
+      margin-top: -5rem;
+    }
+    80% {
+      margin-top: -5rem;
+    }
+    90% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+}

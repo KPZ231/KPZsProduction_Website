@@ -193,6 +193,7 @@ hr::after {
   animation-delay: 0.5s;
   opacity: 0;
   animation-fill-mode: forwards;
+  text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -491,6 +492,8 @@ iframe:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   
   .typewriter h1 {
@@ -500,20 +503,22 @@ iframe:hover {
   }
   
   .cont {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    max-width: 300px;
+    justify-content: center;
     margin: 1.5rem auto;
     gap: 15px;
   }
   
   .button {
-    width: 100%;
+    display: block;
+    width: 80%;
+    max-width: 280px;
+    margin: 0 auto 15px;
     text-align: center;
     padding: 10px 20px;
-    margin: 0;
   }
   
   .informationContainer {
@@ -931,4 +936,10 @@ h3:not(.scroll-animated),
     white-space: normal;
     animation: none;
   }
+}
+
+/* Remove these unused mobile button classes */
+.mobile-centered-buttons,
+.mobile-centered-button {
+  display: none;
 }

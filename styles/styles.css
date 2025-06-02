@@ -488,6 +488,9 @@ iframe:hover {
   
   .container {
     padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   
   .typewriter h1 {
@@ -497,14 +500,20 @@ iframe:hover {
   }
   
   .cont {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: 90%;
+    max-width: 300px;
+    margin: 1.5rem auto;
+    gap: 15px;
   }
   
   .button {
     width: 100%;
     text-align: center;
     padding: 10px 20px;
+    margin: 0;
   }
   
   .informationContainer {
@@ -546,8 +555,11 @@ iframe:hover {
   
   .containerForAbout {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 10px;
+    width: 100%;
   }
   
   .animation {
@@ -813,119 +825,12 @@ iframe:hover {
   background-color: rgba(224, 165, 0, 0.2);
 }
 
-/* Mobile menu button and navigation for small screens */
-.mobile-menu-btn {
-  display: none;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: var(--transition);
-  z-index: 101;
-  cursor: pointer;
-}
-
-.mobile-menu-btn:hover {
-  background-color: var(--accent-color);
-}
-
-.mobile-menu-btn:hover span {
-  color: var(--text-dark);
-}
-
-.mobile-menu-btn span {
-  font-size: 24px;
-  color: var(--accent-color);
-  transition: var(--transition);
-}
-
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 70%;
-  max-width: 300px;
-  height: 100%;
-  background-color: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  transition: var(--transition);
-  padding: 5rem 1.5rem 2rem;
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
-}
-
-.mobile-nav.active {
-  right: 0;
-}
-
+/* The following mobile menu styles can be removed since they're not needed anymore */
+.mobile-menu-btn,
+.mobile-nav,
+.overlay,
 .mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.mobile-nav-links a {
-  color: var(--text-light);
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.mobile-nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--accent-color);
-  transition: var(--transition);
-}
-
-.mobile-nav-links a:hover {
-  color: var(--accent-color);
-}
-
-.mobile-nav-links a:hover::after {
-  width: 100%;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 99;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.overlay.active {
-  opacity: 1;
-}
-
-@media (max-width: 991px) {
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .mobile-nav, .overlay {
-    display: block;
-  }
+  display: none !important;
 }
 
 /* Touch-specific styles */

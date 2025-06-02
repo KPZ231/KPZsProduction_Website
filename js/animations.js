@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
     p.style.setProperty('--paragraph-index', index);
   });
   
+  // Create staggered animation effect for cards on project page
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach((card, index) => {
+    card.style.setProperty('--card-index', index);
+  });
+  
   // Enhance scroll behavior for smoother animations
   const smoothScrollElements = document.querySelectorAll('a[href^="#"]');
   smoothScrollElements.forEach(anchor => {
@@ -87,43 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize scroll animations
   window.addEventListener('scroll', handleScrollAnimations);
   handleScrollAnimations(); // Run once on page load
-  
-  // Add swipe detection for mobile navigation
-  let touchStartX = 0;
-  let touchEndX = 0;
-  
-  function handleSwipeGesture() {
-    const mobileNav = document.getElementById('mobileNav');
-    const overlay = document.getElementById('overlay');
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    
-    if (!mobileNav) return;
-    
-    // Detect swipe direction
-    if (touchEndX - touchStartX > 100) {
-      // Swipe right - open menu
-      if (!mobileNav.classList.contains('active')) {
-        mobileNav.classList.add('active');
-        overlay.classList.add('active');
-        mobileMenuBtn.querySelector('span').textContent = 'close';
-      }
-    } else if (touchStartX - touchEndX > 100) {
-      // Swipe left - close menu
-      if (mobileNav.classList.contains('active')) {
-        mobileNav.classList.remove('active');
-        overlay.classList.remove('active');
-        mobileMenuBtn.querySelector('span').textContent = 'menu';
-      }
-    }
-  }
-  
-  // Add touch event listeners
-  document.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, false);
-  
-  document.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipeGesture();
-  }, false);
 });

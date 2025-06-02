@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects Portfolio | Kacper Duda | KPZsProductions</title>
     <meta name="author" content="Kacper Duda" />
-    <meta name="keywords" content="portfolio, projects, KPZ, productions, game development, software engineering, web development, Inkwell, Lipus" />
+    <meta name="keywords" content="portfolio, projects, KPZ, productions, game development, software engineering, web development, Inkwell, Lipus, programmer" />
     <meta
       name="description"
       content="Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus."
@@ -25,6 +25,9 @@
     <meta property="og:title" content="Projects Portfolio | Kacper Duda | KPZsProductions" />
     <meta property="og:description" content="Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus." />
     <meta property="og:image" content="https://kpz231.github.io/KPZsProduction_Website/img/portfolio-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="KPZsProductions" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -39,6 +42,11 @@
     />
     <!-- Links -->
     <link rel="stylesheet" href="styles/styles.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    
     <style>
       /* Additional project card styles */
       .project-card {
@@ -164,7 +172,7 @@
       
       <div class="grid">
         <div class="project-card" style="--card-index: 2;">
-          <img src="/api/placeholder/400/180" alt="Inkwell Project" class="project-image">
+          <img src="img/inkwell-preview.jpg" alt="Inkwell Project" class="project-image">
           <h4>Inkwell</h4>
           <p style="--paragraph-index: 0;">Inkwell is a multidimensional platform that connects people, making note-taking more collaborative and efficient.</p>
           <div class="tech-tags">
@@ -172,22 +180,22 @@
             <span class="tech-tag">PHP</span>
             <span class="tech-tag">CSS</span>
           </div>
-          <a href="#" class="project-link">
+          <a href="#" class="project-link" aria-label="View Inkwell Project">
             View Project <span class="material-symbols-outlined">arrow_forward</span>
           </a>
         </div>
         
         <div class="project-card" style="--card-index: 3;">
-          <img src="/api/placeholder/400/180" alt="Lipus" class="project-image">
+          <img src="img/lipus-preview.jpg" alt="Łowisko Lipus" class="project-image">
           <h4>Łowisko Lipus</h4>
-          <p style="--paragraph-index: 0;">A website for, private fishing lake</p>
+          <p style="--paragraph-index: 0;">A website for a private fishing lake with information about facilities and booking.</p>
           <div class="tech-tags">
             <span class="tech-tag">HTML</span>
-            <span class="tech-tag">PHP.js</span>
+            <span class="tech-tag">PHP</span>
             <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JS</span>
+            <span class="tech-tag">JavaScript</span>
           </div>
-          <a href="#" class="project-link">
+          <a href="#" class="project-link" aria-label="View Łowisko Lipus Project">
             View Project <span class="material-symbols-outlined">arrow_forward</span>
           </a>
         </div>
@@ -211,5 +219,46 @@
       });
     </script>
     <script src="js/structured-data.js"></script>
+    
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "headline": "Projects Portfolio | Kacper Duda",
+      "description": "Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus.",
+      "author": {
+        "@type": "Person",
+        "name": "Kacper Duda",
+        "url": "https://kpz231.github.io/KPZsProduction_Website/about.html"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Inkwell",
+              "description": "A multidimensional platform that connects people, making note-taking more collaborative and efficient.",
+              "applicationCategory": "WebApplication",
+              "operatingSystem": "Web"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "WebSite",
+              "name": "Łowisko Lipus",
+              "description": "A website for a private fishing lake with information about facilities and booking.",
+              "url": "#"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </body>
 </html>

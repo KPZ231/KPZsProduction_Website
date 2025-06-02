@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kpz231.github.io/KPZsProduction_Website/sitemap.xml 

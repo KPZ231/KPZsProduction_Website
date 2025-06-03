@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects Portfolio | Kacper Duda | KPZsProductions</title>
+    <title>Development Services & Projects | Game & Web Development | KPZsProductions</title>
     <meta name="author" content="Kacper Duda" />
-    <meta name="keywords" content="portfolio, projects, KPZ, productions, game development, software engineering, web development, Inkwell, Lipus, programmer" />
+    <meta name="keywords" content="game development services, web development, software engineering projects, Inkwell, Lipus, programming portfolio, Kacper Duda, custom software development, project showcase" />
     <meta
       name="description"
-      content="Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus."
+      content="Explore Kacper Duda's professional portfolio of game development and software engineering projects. Offering custom development services for web applications, games, and software solutions."
     />
     <meta name="robots" content="index, follow" />
     <meta
@@ -22,19 +22,19 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kpz231.github.io/KPZsProduction_Website/proj.html" />
-    <meta property="og:title" content="Projects Portfolio | Kacper Duda | KPZsProductions" />
-    <meta property="og:description" content="Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus." />
+    <meta property="og:title" content="Development Services & Projects | Game & Web Development | KPZsProductions" />
+    <meta property="og:description" content="Explore Kacper Duda's professional portfolio of game development and software engineering projects. Offering custom development services for web applications, games, and software solutions." />
     <meta property="og:image" content="https://kpz231.github.io/KPZsProduction_Website/img/portfolio-preview.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="KPZsProductions" />
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://kpz231.github.io/KPZsProduction_Website/proj.html" />
-    <meta property="twitter:title" content="Projects Portfolio | Kacper Duda | KPZsProductions" />
-    <meta property="twitter:description" content="Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus." />
-    <meta property="twitter:image" content="https://kpz231.github.io/KPZsProduction_Website/img/portfolio-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://kpz231.github.io/KPZsProduction_Website/proj.html" />
+    <meta name="twitter:title" content="Development Services & Projects | Game & Web Development | KPZsProductions" />
+    <meta name="twitter:description" content="Explore Kacper Duda's professional portfolio of game development and software engineering projects. Offering custom development services for web applications, games, and software solutions." />
+    <meta name="twitter:image" content="https://kpz231.github.io/KPZsProduction_Website/img/portfolio-preview.jpg" />
     
     <link
       rel="stylesheet"
@@ -49,45 +49,59 @@
     
   </head>
   <body>
-    <a href="./index.html" class="return-button">
-      <span class="material-symbols-outlined">keyboard_return</span>
-    </a>
+    <header>
+      <a href="./index.html" class="return-button" aria-label="Return to homepage">
+        <span class="material-symbols-outlined">keyboard_return</span>
+      </a>
+    </header>
     
-    <div class="container">
-      <h1>My <i>Projects</i></h1>
+    <main class="container">
+      <h1>My <i>Projects</i> & <i>Services</i></h1>
       <hr>
       
+      <section class="services-intro">
+        <h2>Development Services</h2>
+        <p>I offer professional development services in the following areas:</p>
+        <ul class="services-list">
+          <li><strong>Game Development:</strong> Custom games for multiple platforms using Unity, Unreal Engine, and custom engines</li>
+          <li><strong>Web Development:</strong> Responsive websites, web applications, and e-commerce solutions</li>
+          <li><strong>Software Engineering:</strong> Custom software solutions for businesses and individuals</li>
+        </ul>
+        <p>Contact me to discuss your project requirements and get a custom solution tailored to your needs.</p>
+      </section>
+      
+      <h2>Featured Projects</h2>
       <div class="grid">
-        <div class="project-card" style="--card-index: 2;">
-          <img src="img/inkwell-preview.jpg" alt="Inkwell Project" class="project-image">
-          <h4>Inkwell</h4>
-          <p style="--paragraph-index: 0;">Inkwell is a multidimensional platform that connects people, making note-taking more collaborative and efficient.</p>
+        <article class="project-card" style="--card-index: 2;">
+          <img src="img/inkwell-preview.jpg" alt="Inkwell - Collaborative Note-Taking Platform" class="project-image">
+          <h3>Inkwell</h3>
+          <p style="--paragraph-index: 0;">Inkwell is a multidimensional platform that connects people, making note-taking more collaborative and efficient. This web application allows users to create, share, and collaborate on notes in real-time.</p>
           <div class="tech-tags">
             <span class="tech-tag">HTML</span>
             <span class="tech-tag">PHP</span>
             <span class="tech-tag">CSS</span>
           </div>
-          <a href="#" class="project-link" aria-label="View Inkwell Project">
+          <a href="#" class="project-link" aria-label="View Inkwell Project - Collaborative Note-Taking Platform">
             View Project <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-        </div>
+        </article>
         
-        <div class="project-card" style="--card-index: 3;">
-          <img src="img/lipus-preview.jpg" alt="Łowisko Lipus" class="project-image">
-          <h4>Łowisko Lipus</h4>
-          <p style="--paragraph-index: 0;">A website for a private fishing lake with information about facilities and booking.</p>
+        <article class="project-card" style="--card-index: 3;">
+          <img src="img/lipus-preview.jpg" alt="Łowisko Lipus - Fishing Lake Website" class="project-image">
+          <h3>Łowisko Lipus</h3>
+          <p style="--paragraph-index: 0;">A comprehensive website for a private fishing lake with information about facilities, pricing, and an online booking system. The site includes an interactive map, gallery, and contact form.</p>
           <div class="tech-tags">
             <span class="tech-tag">HTML</span>
             <span class="tech-tag">PHP</span>
             <span class="tech-tag">CSS</span>
             <span class="tech-tag">JavaScript</span>
           </div>
-          <a href="#" class="project-link" aria-label="View Łowisko Lipus Project">
+          <a href="#" class="project-link" aria-label="View Łowisko Lipus Project - Fishing Lake Website">
             View Project <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-        </div>
+        </article>
       </div>
-    </div>
+    </main>
     
     <script>
       // Add animation classes to elements
@@ -114,39 +128,84 @@
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "headline": "Projects Portfolio | Kacper Duda",
-      "description": "Explore Kacper Duda's portfolio of game development and software engineering projects, including Inkwell and Łowisko Lipus.",
+      "headline": "Development Services & Projects | KPZsProductions",
+      "description": "Professional portfolio of game development and software engineering projects by Kacper Duda. Offering custom development services.",
       "author": {
         "@type": "Person",
         "name": "Kacper Duda",
         "url": "https://kpz231.github.io/KPZsProduction_Website/about.html"
       },
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "Inkwell",
-              "description": "A multidimensional platform that connects people, making note-taking more collaborative and efficient.",
-              "applicationCategory": "WebApplication",
-              "operatingSystem": "Web"
+      "mainEntity": [
+        {
+          "@type": "ItemList",
+          "name": "Featured Projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Inkwell",
+                "description": "A multidimensional platform that connects people, making note-taking more collaborative and efficient.",
+                "applicationCategory": "WebApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebSite",
+                "name": "Łowisko Lipus",
+                "description": "A comprehensive website for a private fishing lake with information about facilities, pricing, and an online booking system.",
+                "url": "#"
+              }
             }
+          ]
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Development Services",
+          "provider": {
+            "@type": "Person",
+            "name": "Kacper Duda"
           },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "WebSite",
-              "name": "Łowisko Lipus",
-              "description": "A website for a private fishing lake with information about facilities and booking.",
-              "url": "#"
-            }
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Development Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Game Development",
+                  "description": "Custom games for multiple platforms"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Web Development",
+                  "description": "Responsive websites and web applications"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Software Engineering",
+                  "description": "Custom software solutions"
+                }
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     }
     </script>
   </body>
